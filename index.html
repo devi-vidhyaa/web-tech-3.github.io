@@ -5,15 +5,25 @@
 </head>
 <body>
 <!--<button onclick="this.innerHTML='Text Changed!'">Click on this text!</button></br>-->
-<div id = "abc" onmouseover="mOver()" onmouseout="mOut(this)" style = "background-color:red; height:40px; width:120px">Mouse Over me</div>
+<div id = "abc" onmouseover="mOver()" onmouseout="mOut(this)" onmousedown="mDown(this)" onmouseup = "mUp(this)" style = "background-color:red; height:40px; width:120px">click me</div>
 <script>
   function mOver()
   {
-    document.getElementById("abc").innerHTML =<span style="color:green;">hello</span></br>
+    document.getElementById("abc").innerHTML="<span style = 'color:green;'> hello </span> </br>";
   }
   function mOut(obj)
   {
-    obj.innerHTML = "Mouse Over Me now!!"
+    obj.innerHTML = "Mouse Over Me now!!";
+  }
+  function mDown(obj)
+  {
+  obj.style.backgroundColor = "aqua";
+  	obj.innerHTML = "Release me";
+  }
+  function mUp(obj)
+  {
+  obj.style.backgroundColor = "red";
+  obj.innerHTML = "Click-on-me";
   }
 </script>
 

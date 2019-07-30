@@ -4,9 +4,18 @@
 
 </head>
 <body>
-<h1 onclick="this.innerHTML='Text Changed!'">Click on this text!</h1>
-
-
+<button onclick="this.innerHTML='Text Changed!'">Click on this text!</button>
+<div id = "abc" onmouseover="mOVer()" onmouseout="mOut(this)" style = "background-color:red">Mouse Over me</div>
+<script>
+  function mOver()
+  {
+    document.getElementById("abc").innerHTML = "<span style='color:green;'>Msg</span></br>
+  }
+  function mOut(obj)
+  {
+    obj.innerHTML = "Mouse Over Me"
+  }
+</script>
 
 </body>
 </html>

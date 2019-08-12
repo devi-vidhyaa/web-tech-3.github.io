@@ -16,7 +16,7 @@ body{
 While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, <br>such as Node.js, Apache CouchDB and Adobe Acrobat.
 JavaScript is a prototype-based, multi-paradigm, dynamic language,<br> supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.</p>
 <button onclick="this.innerHTML='Text Changed!'" style = "background-color: #1e90ff; height:50px; width:100px;margin-left:25%; border-radius: 10px;">Click here</button></br>
-<div id = "image" onclick="mClick(this)"><img src = 'img1.PNG'></div>
+<div id = "image" onmouseover="mOver()" onclick="mClick()"><img src = 'img1.PNG'></div>
 <div id = "time" style = "text-align:right; margin-top:100px"></div>
 <script>
   n =  new Date();
@@ -31,7 +31,7 @@ JavaScript is a prototype-based, multi-paradigm, dynamic language,<br> supportin
   {
 	document.getElementById("image").innerHTML="<img src = 'img2.PNG'>";
   }
-  function mClick(obj)
+  function mClick()
   {
     alert("Mouse over me");
     //obj.style.textAlign = "right";
